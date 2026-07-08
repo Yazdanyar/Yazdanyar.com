@@ -8,25 +8,49 @@
 <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
 <link rel="stylesheet" href="../css/style.css">
 <link rel="stylesheet" href="../css/subpage.css">
+<link rel="stylesheet" href="../css/access.css">
 </head>
 <body>
 
 <a class="back-link" href="../index.html">&larr; Tilbage</a>
 
-<main class="sub-page">
+<main class="sub-page access-page">
 
   <header class="sub-hero">
     <p class="sub-eyebrow">Kianoush Yazdanyar</p>
     <h1 class="sub-title">Privat</h1>
-    <p class="sub-lede panel-intro--gate">
-      Dette er den del af mig der ikke er kurateret til omverdenen — hverdagstanker, livstidslinje, billeder og noter om de ting der optager mig privat. Kræver adgang.
-    </p>
+    <p class="sub-lede">Denne del er forbeholdt venner og familie. Anmod om adgang herunder - jeg godkender manuelt.</p>
   </header>
 
-  <a class="access-button" href="#" data-access-placeholder>Anmod om adgang</a>
+  <div class="access-form-wrap">
+    <form name="privat-adgang" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="access-form">
+      <input type="hidden" name="form-name" value="privat-adgang">
+      <p class="access-honeypot"><label>Udfyld ikke dette felt: <input name="bot-field"></label></p>
+
+      <div class="form-field">
+        <label for="navn-privat">Navn</label>
+        <input type="text" id="navn-privat" name="navn" placeholder="Dit fulde navn" required>
+      </div>
+
+      <div class="form-field">
+        <label for="email-privat">E-mail</label>
+        <input type="email" id="email-privat" name="email" placeholder="din@email.dk" required>
+      </div>
+
+      <div class="form-field">
+        <label for="besked-privat">Hvem er du? <span class="form-optional">(valgfrit)</span></label>
+        <textarea id="besked-privat" name="besked" placeholder="Fortæl kort hvem du er, så jeg ved hvem jeg taler med" rows="3"></textarea>
+      </div>
+
+      <button type="submit" class="form-submit">Anmod om adgang</button>
+    </form>
+
+    <p class="access-note">Du modtager en e-mail hvis din anmodning godkendes.</p>
+  </div>
 
 </main>
 
