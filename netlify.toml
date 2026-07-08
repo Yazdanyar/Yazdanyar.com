@@ -1,0 +1,19 @@
+[[redirects]]
+  from = "/sexologi"
+  to = "/sexologi/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/sexologi/"
+  to = "/sexologi/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/privat"
+  to = "/privat/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/privat/"
+  to = "/privat/index.html"
+  status = 200
